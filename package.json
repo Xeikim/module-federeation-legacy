@@ -1,0 +1,16 @@
+{
+  "name": "module-federation-legacy",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:host": "pnpm --filter webpack-host dev",
+    "dev:remote": "pnpm --filter vite-remote dev",
+    "build:host": "pnpm --filter webpack-host build",
+    "build:remote": "pnpm --filter vite-remote build",
+    "preview:remote": "pnpm --filter vite-remote preview",
+    "dev": "pnpm run preview:remote & pnpm run dev:host"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
